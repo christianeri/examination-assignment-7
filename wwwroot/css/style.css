@@ -1,5 +1,43 @@
+header {
+    background-color: #F0EFE9;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* NAVBAR */
+
+.nav-section {
+    background-color: #F0EFE9;
+    color: #191919;
+    font-size: 15px;
+}
+
+.nav-section a {
+    color: #191919;
+}
+
+.nav-section .first-row {
+    border-bottom: 1px solid #909090;
+}
+
+.navbar > * {
+    padding-right: 2rem;
+}
+    
+.active {
+    text-decoration: underline;
+}
+
+
+
 /* SHOWCASE */
 
+.showcase-section {
+    background-color: #F0EFE9;
+}
 
 
 /* FOOTER */
@@ -32,8 +70,9 @@ footer .logo p {
     
 
 .wrapper {
-    height: 100dvh;
+    height: 100%;
     display: flex;
     flex-direction: column;
 }
+        
         

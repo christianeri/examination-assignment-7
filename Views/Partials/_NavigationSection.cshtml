@@ -1,4 +1,20 @@
 ﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@using Umbraco.Cms.Core
+@using Umbraco.Cms.Core.Models.PublishedContent
+@using Umbraco.Cms.Core.Routing
+@using Umbraco.Extensions
+
+@inject IPublishedValueFallback PublishedValueFallback
+@inject IPublishedUrlProvider PublishedUrlProvider
+
+
+@{ 
+    var site = Model.Root();
+    var selection = Model.Root().Children.Where(x => x.IsVisible(PublishedValueFallback)).ToArray(); 
+    
+}
+
+
 
 <section class="nav-section">
     <div class="container d-flex border">
@@ -6,7 +22,7 @@
         <a href="home.html"><img class="logotype pe-5" src="~/static/logotypes/logotype.svg" alt=""></a>
         
         <nav>
-            <div class="first-row d-flex justify-content-between border">
+            <div class="first-row d-flex justify-content-between pb-2">
                 <div class="company-info pe-5">
                     <span><i class="fa-regular fa-phone-volume"></i> +46 (8) 121 470 50</span>
                     <span><i class="fa-regular fa-envelope ps-5"></i> info@crito.com</span>
@@ -21,12 +37,19 @@
                 </div>
             </div>
             
-            <div class="second-row d-flex justify-content-between border">
+            <div class="second-row d-flex justify-content-between align-items-center pt-2">
                 <div class="navbar">
-                    <a class="active" href="/">Home</a>
-                    <a href="/services">Service</a>
-                    <a href="/news">News</a>
-                    <a href="/contact">Contact</a>
+                    <a class="@(Model.Id == site.Id ? "active": null)" href="@site.Url()">@site.Name</a>
+
+                    
+                    @if (selection?.Length > 0)
+                    {
+                        @foreach (var item in selection)
+                        {
+                            <a class="@(item.IsAncestorOrSelf(Model) ? "current" : null)" href="@item.Url(PublishedUrlProvider)">@item.Name</a>
+                        }
+                    }
+                    
                 </div>
                 <a class="btn-theme" href="/login">Login <i class="fa-solid fa-arrow-up-right"></i></a>
             </div>
