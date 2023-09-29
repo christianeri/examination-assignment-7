@@ -40,6 +40,27 @@ a {
 }
 
 
+
+/* FEATURES */
+
+.feature-box .umb-block-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+
+
+/* OUR SERVICES */
+
+.services-box .umb-block-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+
+
 /* FOOTER */
 
 footer {
