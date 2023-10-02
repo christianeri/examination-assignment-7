@@ -5,15 +5,15 @@
 <section class="feature-section">
     <div class="container">
           <div class="section-border">
-              <div class="section-title">@Model.Value("serviceFeaturesSectionTag")</div>
+              <div class="section-title">@Model.Value("servicesFeaturesSectionTag")</div>
               <div class="feature-grid">
                   <div class="feature-learnmore">
-                        <h2>@Model.Value("serviceFeaturesSectionHeading")</h2>
-                        <a class="btn-theme" href="@Model.Value("serviceFeaturesSectionButtonURL")">@Model.Value("serviceFeaturesSectionButtonLabel")<i class="fa-solid fa-arrow-up-right"></i></a>
+                        <h2>@Model.Value("servicesFeaturesSectionHeading")</h2>
+                        <a class="btn-theme" href="@Model.Value("servicesFeaturesSectionButtonURL")">@Model.Value("servicesFeaturesSectionButtonLabel")<i class="fa-solid fa-arrow-up-right"></i></a>
                   </div>
                   
                   <div class="feature-boxes">
-                    @Html.GetBlockListHtml(Model.ServiceFeatures)      
+                    @Html.GetBlockListHtml(Model.ServicesFeatures)      
                   </div>
                   
               </div>
