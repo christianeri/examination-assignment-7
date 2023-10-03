@@ -2,6 +2,7 @@
 using MailKit.Security;
 using MimeKit;
 using MimeKit.Text;
+using System.Diagnostics;
 
 namespace Crito.Services
 {
@@ -24,8 +25,7 @@ namespace Crito.Services
             _client = new MailKit.Net.Smtp.SmtpClient();
         }
 
-
-        private async Task SendAsync(string to, string subject, string body)
+        public async Task SendAsync(string to, string subject, string body)
         {
             try
             {
@@ -41,7 +41,9 @@ namespace Crito.Services
 
                 var result = await _client.SendAsync(email);
             }
-            catch { }
+            catch(Exception Ex) {
+                Debug.WriteLine(Ex.Message);
+            }
         }
 
 

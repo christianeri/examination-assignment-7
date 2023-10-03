@@ -1,4 +1,5 @@
 ﻿using Crito.Models;
+using Crito.Services;
 using Microsoft.AspNetCore.Mvc;
 using Umbraco.Cms.Core.Cache;
 using Umbraco.Cms.Core.Logging;
@@ -24,12 +25,18 @@ namespace Crito.Controllers
                 return CurrentUmbracoPage();
             }
 
-            return RedirectToCurrentUmbracoPage();
+            using var mail = new MailService("no-reply@crito.com", "smtp.crito.com", 587, "contactform@crito.com", "P@ssw0rd2023");
 
-            //if (!string.IsNullOrWhiteSpace(contactForm.RedirectURL))
-            //    return LocalRedirect(contactForm.RedirectURL);
+            mail.SendAsync(contactForm.Email, "Message received", "Thank you for contacting us!").ConfigureAwait(false);
+            mail.SendAsync("christian.eriksson2@learnet.se", $"{contactForm.Name} sent a contact request", contactForm.Message).ConfigureAwait(false);
+
+
+
+            //return RedirectToCurrentUmbracoPage();
+            return LocalRedirect(contactForm.RedirectURL ?? "/");
+
+
                 
-            //return LocalRedirect("/");
         }
     }
 }
