@@ -13,6 +13,7 @@ namespace Crito.Models
         
         [Required]
         public string Message { get; set; } = null!;
+        
         [Required]
         public string RedirectURL { get; set; } = "/contacts";
     }
