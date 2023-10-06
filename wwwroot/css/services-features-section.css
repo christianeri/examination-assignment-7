@@ -1,0 +1,25 @@
+
+.feature-section .section-border {
+    display: flex;
+    border: 2px solid #808080;
+    padding: 3rem;
+}
+
+.feature-section .left {
+    width: 40%;
+    margin-right: 4rem;
+
+}
+
+.feature-section .section-title {
+    color: #F94D1C;
+}
+
+.feature-section .right {
+}
+
+.feature-box .umb-block-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}

@@ -2,21 +2,20 @@
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.HomePage>
 @using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
 
-<section class="feature-section">
-    <div class="container">
-          <div class="section-border">
-              <div class="section-title">@Model.Value("servicesFeaturesSectionTag")</div>
-              <div class="feature-grid">
-                  <div class="feature-learnmore">
-                        <h2>@Model.Value("servicesFeaturesSectionHeading")</h2>
-                        <a class="btn-theme" href="@Model.Value("servicesFeaturesSectionButtonURL")">@Model.Value("servicesFeaturesSectionButtonLabel")<i class="fa-solid fa-arrow-up-right"></i></a>
-                  </div>
-                  
-                  <div class="feature-boxes">
-                    @Html.GetBlockListHtml(Model.ServicesFeatures)      
-                  </div>
-                  
-              </div>
-          </div>
+<head>
+    <link href="~/css/services-features-section.css" rel="stylesheet">
+</head>
+
+<section class="feature-section container">
+    <div class="section-border">
+        <div class="left">
+            <div class="section-title">@Model.Value("servicesFeaturesSectionTag")</div>
+            <h2 class="pb-4">@Model.Value("servicesFeaturesSectionHeading")</h2>
+            <a class="btn-theme border" href="@Model.Value("servicesFeaturesSectionButtonURL")">@Model.Value("servicesFeaturesSectionButtonLabel")<i class="fa-solid fa-arrow-up-right"></i></a>
+        </div>      
+ 
+        <div class="right feature-box">
+            @Html.GetBlockListHtml(Model.ServicesFeatures)      
+        </div>
     </div>
 </section>

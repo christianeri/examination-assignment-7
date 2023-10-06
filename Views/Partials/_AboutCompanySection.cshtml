@@ -1,0 +1,40 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+
+
+
+@using Umbraco.Cms.Web.Common.PublishedModels;
+
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@using Umbraco.Cms.Core.Services;
+@using Umbraco.Cms.Core.Models.PublishedContent;
+
+@{
+	var image = Model.Value<IPublishedContent>("aboutCompanySectionImage");
+}
+
+<head>
+    <link href="~/css/about-company-section.css" rel="stylesheet">
+</head>
+
+<section class="about-company my-5">
+    <div class="container d-flex">
+    
+        <div class="left border">
+            <img src="@image.Url()" alt="">
+            <div class="featured p-4">
+                <h4>
+                    <span>@Model.Value("aboutCompanySectionFeaturedName"), </span><span class="role">@Model.Value("aboutCompanySectionFeaturedRole")</span>
+                </h4>
+                <p>@Model.Value("aboutCompanySectionFeaturedQuote")</p>
+            </div>
+        </div>
+        
+        <div class="right border">
+            <h5 class="section-title color-coral">@Model.Value("aboutCompanySectionTag")</h5>
+            <h1 class="pb-4">@Model.Value("aboutCompanySectionHeading")</h1>
+            <p>@Model.Value("aboutCompanySectionText")</p>
+            <a class="btn-theme border" href="@Model.Value("aboutCompanySectionButtonURL")">@Model.Value("aboutCompanySectionButtonLabel")<i class="fa-solid fa-arrow-up-right"></i></a>
+        </div>
+    
+    </div>
+</section>

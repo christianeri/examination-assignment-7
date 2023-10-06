@@ -1,0 +1,37 @@
+.about-company {
+   padding: 3rem;
+}
+
+.about-company .container {
+   max-height: 800px;
+}
+
+
+.about-company .left {
+    margin: 0 3rem 0 6rem;
+    width: 50%;
+}
+
+.about-company .left img {
+    width: 533px;
+}
+    .about-company .left .featured {
+        position: relative;
+        right: 50px;
+        bottom: 300px;
+        height: 180px;
+        width: 370px;
+        background-color: #BEEBFF;
+    }
+    .about-company .role {
+        color: #F94D1C;
+    }
+
+
+.about-company .right {
+    width: 50%;
+    margin: 0 6rem 0 3rem;
+}
+    .about-company .section-title {
+        color: #F94D1C;
+    }
