@@ -1,0 +1,18 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+
+@{
+    var content = (ContentModels.WhyChooseUsItem)Model.Content;
+}
+
+<head>
+    <link href="~/css/why-choose-us-section.css" rel="stylesheet">
+</head>
+
+<div class="item d-flex">
+    <i class="@content.Value("whyChooseUsItemIcon") my-2 me-4"></i>
+    <div>
+        <h4>@content.Value("whyChooseUsItemTitle")</h4>
+        <p>@content.Value("whyChooseUsItemDescription")</p>
+    </div>
+</div>
