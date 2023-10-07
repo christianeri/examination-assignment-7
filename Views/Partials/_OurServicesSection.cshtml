@@ -2,15 +2,29 @@
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.HomePage>
 @using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
 
-<section class="service-section">
-    <img class="background-lines-right" src="images/background-lines-right.svg" alt="">
+<head>
+    <link href="~/css/our-services-section.css" rel="stylesheet">
+</head>
+
+<section class="services-section pt-5 border">
+    
     <div class="container">
-          <div class="section-title">@Model.Value("ourServicesSectionTag")</div>
-          <h2>@Model.Value("ourServicesSectionHeading")</h2>
-          <div class="service-boxes">
-                 @Html.GetBlockListHtml(Model.OurServices)  
-          <div class="browse-services">
-              <a class="btn-outline-dark" href="@Model.Value("ourServicesSectionButtonURL")">@Model.Value("ourServicesSectionButtonLabel")<i class="fa-solid fa-arrow-up-right"></i></a>
-          </div>
+
+        <h5 class="section-title color-coral">@Model.Value("ourServicesSectionTag")</h5>
+
+        <h1 class="pb-4">@Model.Value("ourServicesSectionHeading")</h1>
+
+        <div class="services-boxes">
+             @Html.GetBlockListHtml(Model.OurServices)  
+        </div>
+
+        
+        <div class="browse-services pt-4">
+            <a class="btn-outline" href="@Model.Value("ourServicesSectionButtonURL")">@Model.Value("ourServicesSectionButtonLabel")<i class="fa-solid fa-arrow-up-right"></i></a>
+        </div>
     </div>
+    <div class="d-flex justify-content-end">
+        <img src="~/static/background-effects/background-lines-right.svg" alt="">
+    </div>
+
 </section>

@@ -6,12 +6,16 @@
     var content = (ContentModels.OurServicesItem)Model.Content;
 }
 
+<head>
+    <link href="~/css/our-services-section.css" rel="stylesheet">
+    <link href="~/css/buttons.css" rel="stylesheet">
+</head>
 
-<div class="services-box">
-        <div class="line"></div>
-        <h4>@content.Value("OurServicesItemTitle")</h4>
-        <p>@content.Value("OurServicesItemDescription")</p>
-        <div class="service-box-links">
-              <a class="btn-circle" href="@content.Value("OurServiceItemURL")"><i class="fa-light fa-arrow-right"></i></a>
-        </div>
+<div class="services-box p-4 mx-4">
+    <div class="line"></div>
+    <h4>@content.Value("OurServicesItemTitle")</h4>
+    <p">@content.Value("OurServicesItemDescription")</p>
+    <div class="services-box-links">
+          <a class="btn-circle" href="@content.Value("OurServiceItemURL")"><i class="fa-light fa-arrow-right"></i></a>
     </div>
+</div>

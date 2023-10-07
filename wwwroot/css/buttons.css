@@ -1,0 +1,33 @@
+﻿.btn-theme {
+    width: 460px;
+    height: 56px;
+    padding: 1rem 1.2rem;
+    border-radius: 40px;
+    background-color: #f9d783;
+    color: #191919;
+}
+    .btn-theme i {
+        margin-left: 5px;
+    }
+
+.btn-circle {
+    padding: 1rem 1.2rem;
+    border-radius: 50%;
+    background-color: #191919;
+    color: #FFFFFF;
+}
+    .btn-circle i {
+        margin-left: 5px;
+    }
+
+.btn-outline {
+    padding: 1rem 1.2rem;
+    border: 1px solid #191919;
+    border-radius: 40px;
+    color: #191919;
+}
+    .btn-outline i {
+        margin-left: 5px;
+    }
+
+

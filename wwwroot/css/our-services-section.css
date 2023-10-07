@@ -1,0 +1,29 @@
+
+.services-section {
+    background-color: #F0EFE9;
+}
+
+.services-section .container {
+    display: flex;
+    flex-direction: column;
+}
+
+.services-boxes .umb-block-list {
+    display: flex;
+}
+
+.services-box {
+    background-color: #FFFFFF;
+}
+
+.services-box-links {
+    display: flex;
+    justify-content: end;
+}
+
+.browse-services {
+    display: flex;
+    justify-content: center;
+}
+
+
