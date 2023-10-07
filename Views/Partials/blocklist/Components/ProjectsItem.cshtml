@@ -1,0 +1,19 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>;
+
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+
+
+
+
+@{
+    var content = (ContentModels.ProjectsItem)Model.Content;
+
+}
+
+<div class="">
+
+    <img src="@content.Value("projectsItemImage")" alt="">
+    <h4>@content.Value("projectsItemHeading")</h4>
+    <hr>
+    <a class="btn-theme" href="">Read More <i class="fa-solid fa-arrow-up-right"></i></a>
+</div>

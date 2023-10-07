@@ -19,7 +19,7 @@
 <section class="about-company my-5">
     <div class="container d-flex">
     
-        <div class="left border">
+        <div class="left">
             <img src="@image.Url()" alt="">
             <div class="featured p-4">
                 <h4>
@@ -29,11 +29,11 @@
             </div>
         </div>
         
-        <div class="right border">
+        <div class="right">
             <h5 class="section-title color-coral">@Model.Value("aboutCompanySectionTag")</h5>
             <h1 class="pb-4">@Model.Value("aboutCompanySectionHeading")</h1>
-            <p>@Model.Value("aboutCompanySectionText")</p>
-            <a class="btn-theme border" href="@Model.Value("aboutCompanySectionButtonURL")">@Model.Value("aboutCompanySectionButtonLabel")<i class="fa-solid fa-arrow-up-right"></i></a>
+            <p class="pb-5">@Model.Value("aboutCompanySectionText")</p>
+            <a class="btn-theme" href="@Model.Value("aboutCompanySectionButtonURL")">@Model.Value("aboutCompanySectionButtonLabel")<i class="fa-solid fa-arrow-up-right"></i></a>
         </div>
     
     </div>

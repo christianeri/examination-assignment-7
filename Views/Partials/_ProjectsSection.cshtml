@@ -1,0 +1,21 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.HomePage>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+
+<head>
+    <link href="~/css/projects-section.css" rel="stylesheet">
+</head>
+
+<section class="projects-section container">
+    <div class="section-border">
+        <div class="left">
+            <h5 class="section-title">@Model.Value("servicesFeaturesSectionTag")</h5>
+            <h1 class="pb-5">@Model.Value("servicesFeaturesSectionHeading")</h1>
+            <a class="btn-theme" href="@Model.Value("servicesFeaturesSectionButtonURL")">@Model.Value("servicesFeaturesSectionButtonLabel")<i class="fa-solid fa-arrow-up-right"></i></a>
+        </div>      
+ 
+        <div class="right feature-box">
+            @Html.GetBlockListHtml(Model.ProjectsItems)      
+        </div>
+    </div>
+</section>
