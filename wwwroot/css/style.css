@@ -26,13 +26,6 @@ header {
 
 
 
-/* SHOWCASE */
-
-.showcase-section {
-    background-color: #F0EFE9;
-}
-
-
 .flex-center {
     display: flex;
     justify-content: center;
@@ -49,7 +42,10 @@ header {
     align-items: center;
 }
 
+
+
 /* FOOTER */
+
 footer {
     background-color: #0E1021;
     color: #707070;
@@ -76,11 +72,5 @@ footer .logo p {
         text-decoration: none;
     }
     
-/*
-.wrapper {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-  */      
+ 
          

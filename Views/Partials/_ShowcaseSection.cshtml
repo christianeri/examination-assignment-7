@@ -1,17 +1,24 @@
 ﻿@using Umbraco.Cms.Core.Models
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
 
-<section class="showcase-section">
+<head>
+    <link href="~/css/showcase-section.css" rel="stylesheet">
+    <link href="~/css/buttons.css" rel="stylesheet">
+</head>
+
+<section class="showcase-section m-0 p-0">
     <div class="container d-flex">
-        <div class="content-column">
-            <h1>@Model.Value("showcaseTitle")</h1>
-            <p>@Model.Value("showcaseDescription")</p>
+        
+        <div class="left">
+            <h1>@Model.Value("showcaseHeading")</h1>
+            <p class="py-5">@Model.Value("showcaseDescription")</p>
                 <div class="button-links">
-                    <a class="btn-theme" href="@Model.Value("showcaseButtonURL")">@Model.Value("showcaseButtonText") <i class="fa-solid fa-arrow-up-right"></i></a>
-                    <a class="btn-theme" href="@Model.Value("showcaseButtonURL")">@Model.Value("showcaseButtonText") <i class="fa-solid fa-arrow-up-right"></i></a>
+                    <a class="btn-theme" href="@Model.Value("showcaseButtonLeftURL")">@Model.Value("showcaseButtonLeftLabel") <i class="fa-solid fa-arrow-up-right"></i></a>
+                    <a class="btn-outline mx-3" href="@Model.Value("showcaseButtonRightURL")">@Model.Value("showcaseButtonRightLabel") <i class="fa-solid fa-arrow-up-right"></i></a>
                 </div>
         </div>
-        <div class="image-column">
+        
+        <div class="right">
             @{
                 var showcaseImage = Model.Value<MediaWithCrops>("showcaseImage");
                 if (showcaseImage != null)
@@ -20,6 +27,7 @@
                 }
             }
         </div>
+        
     </div>
-    <img class="background-lines" src="-images/background-effects/background-lines.svg" alt="">
+    <img class="background-lines" src="~/static/background-effects/background-lines.svg" alt="">
 </section>

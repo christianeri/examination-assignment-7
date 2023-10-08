@@ -1,0 +1,32 @@
+
+        /* SHOWCASE */
+
+.showcase-section {
+    height: 800px;
+    background-color: #F0EFE9;
+}
+
+.showcase-section .button-links > * {
+    width: 170px;
+}
+
+.showcase-section .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.showcase-section .left h1 {
+    font-size: 80px;
+    font-weight: bold;
+}
+
+.showcase-section .right img {
+    position: relative;
+    bottom: -74px;
+}
+
+.showcase-section .background-lines {
+    position: relative;
+    bottom: 140px;
+}
