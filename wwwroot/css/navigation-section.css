@@ -15,9 +15,10 @@
     text-decoration: none;
 }
 
-.active {
-    text-decoration: underline;
-}
+    .nav-section .active {
+        text-decoration: underline;
+        text-decoration-thickness: 2px;
+    }
 
 .nav-section a:hover {
     font-weight: bold;

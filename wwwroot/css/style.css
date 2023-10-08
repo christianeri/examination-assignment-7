@@ -11,6 +11,12 @@ a {
     text-decoration: none;
 }
 
+/*
+.background-lines {
+    position: relative;
+    bottom: 0px;
+}
+    */
 
 header {
     margin: 0;
@@ -27,13 +33,13 @@ header {
 }
 
 
-
-
-
+.flex-center {
+    display: flex;
+    justify-content: center;
+}
 
 
 /* FOOTER */
-
 footer {
     background-color: #0E1021;
     color: #707070;

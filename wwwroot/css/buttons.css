@@ -7,17 +7,21 @@
     color: #191919;
 }
     .btn-theme i {
-        margin-left: 5px;
+        margin: 0px 5px;
     }
 
 .btn-circle {
-    padding: 1rem 1.2rem;
+    height: 3rem;
+    width: 3rem;
     border-radius: 50%;
     background-color: #191919;
     color: #FFFFFF;
 }
     .btn-circle i {
-        margin-left: 5px;
+        position: relative;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
     }
 
 .btn-outline {

@@ -1,59 +1,81 @@
 ﻿@using Umbraco.Cms.Web.Common.PublishedModels;
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.ContactPage>
 @using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+
 @{
 	Layout = "LayoutWithBreadcrumb.cshtml";
-	
 	var contactForm = new Crito.Models.ContactForm();
+	ViewData["pageTitle"] = "Let's Connect";
 }
 
-<section class="contactinfo-section">
-    <div class="container">
-          <div class="infobox">
-              <div class="black-circle"><i class="fa-sharp fa-regular fa-location-dot"></i></div>
-              <h5>Visit us</h5>
-              <div class="info">
-                  <p>@Model.Value("contactUsStreetName") @Model.Value("contactUsStreetNumber")</p>
-                  <p>@Model.Value("contactUsPostalCode") @Model.Value("contactUsCity")</p>
-              </div>
-          </div>
-          <div class="infobox">
-              <div class="black-circle"><i class="fa-regular fa-phone-volume"></i></div>
-              <h5>Call us</h5>
-              <div class="info">
-                  <p>@Model.Value("contactUsPhoneNumber1")</p>
-                  <p>@Model.Value("contactUsPhoneNumber2")</p>
-              </div>
-          </div>
-          <div class="infobox">
-              <div class="black-circle"><i class="fa-regular fa-envelope"></i></div>
-              <h5>Email us</h5>
-              <div class="info">
-                  <p>@Model.Value("contactUsEmailAddress1")</p>
-                  <p>@Model.Value("contactUsEmailAddress2")</p>
-              </div>
-          </div>
-    </div>
-</section>
+<head>
+    <link href="~/css/contact-us-section.css" rel="stylesheet">
+    <link href="~/css/buttons.css" rel="stylesheet">
+</head>
 
-<section class="contactform-section">
-    <div class="container">
-        <h2>Leave us a message for any information.</h2>
+<section class="contact-info">
+    <div class="container p-0">
         
-        @using(Html.BeginUmbracoForm("Index", "Contact", FormMethod.Post))
-        {        
-            <div asp-validation-summary="ModelOnly"></div>
-            
-            <input asp-for="@contactForm.Name" name="name" type="text" placeholder="Name*">
-            <input asp-for="@contactForm.Email" name="email" type="email" placeholder="Email*">
-            <textarea asp-for="@contactForm.Message" name="message" placeholder="Your Message*"></textarea>
-            
-            <div class="d-grid">
-                <button type="submit" class="btn-theme">Send Message <i class="fa-solid fa-arrow-up-right"></i></button>
-.           </div>
-        }
-        
+          <div class="contact-info-box">
+              <div class="circle-black"><i class="fa-sharp fa-regular fa-location-dot"></i></div>
+              <div>
+                  <h5>Visit us</h5>
+                  <div class="info">
+                      <div>@Model.Value("contactUsStreetName") @Model.Value("contactUsStreetNumber")</div>
+                      <div>@Model.Value("contactUsPostalCode") @Model.Value("contactUsCity")</div>
+                  </div>
+              </div>
+          </div>
+          
+          <div class="contact-info-box mx-5">
+              <div class="circle-black"><i class="fa-regular fa-phone-volume"></i></div>
+              <div>
+                  <h5>Call us</h5>
+                  <div class="info">
+                      <div>@Model.Value("contactUsPhoneNumber1")</div>
+                      <div>@Model.Value("contactUsPhoneNumber2")</div>
+                  </div>
+              </div>
+          </div>
+          
+          <div class="contact-info-box">
+              <div class="circle-black"><i class="fa-regular fa-envelope"></i></div>
+              <div>
+                  <h5>Email us</h5>
+                  <div class="info">
+                      <div>@Model.Value("contactUsEmailAddress1")</div>
+                      <div>@Model.Value("contactUsEmailAddress2")</div>
+                  </div>
+              </div>
+          </div>
+          
     </div>
+
+    <div class="contact-form my-5">
+        <div class="container pt-5">
+                <h1>Leave us a message for any information.</h1>
+        </div>
+        
+        <div class="container pb-5">
+            <div class="form">
+                @using(Html.BeginUmbracoForm("Index", "Contact", FormMethod.Post))
+                {       
+                    <div class="form-elements">
+               
+                        <div asp-validation-summary="ModelOnly"></div>
+                        
+                        <input class="form-input" asp-for="@contactForm.Name" name="name" type="text" placeholder="Name*">
+                        <input class="form-input" asp-for="@contactForm.Email" name="email" type="email" placeholder="Email*">
+                        <textarea class="form-textarea" asp-for="@contactForm.Message" name="message" placeholder="Your Message*"></textarea>
+                        
+                        <button type="submit mt-2" class="btn-theme">Send Message <i class="fa-solid fa-arrow-up-right"></i></button>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+    
+
 </section>
 
 <div style="max-width:100%;list-style:none; transition: none;overflow:hidden;width:100%;height:500px;">

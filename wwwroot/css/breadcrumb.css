@@ -1,0 +1,30 @@
+.pagetitle-section {
+    background-color: #F0EFE9;
+    color: #191919;
+    margin-top: -100px;
+}
+
+.pagetitle-section a {
+    color: #191919;
+
+}
+
+.pagetitle-section h5 {
+   margin: 0 1rem;
+}
+/*
+    .pagetitle-section .container {
+        display: flex;
+        justify-content: center;
+    }
+*/
+    .pagetitle-section .breadcrumb > * {
+        display: flex;
+        justify-content: center;
+    }
+
+.pagetitle-section .breadcrumb {
+    display: block;
+    position: relative;
+    top: 150px;
+}

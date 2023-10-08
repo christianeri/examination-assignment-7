@@ -26,10 +26,10 @@ namespace Crito.Controllers
         {
             if (!ModelState.IsValid)
             {
-                await _contactRequestService.AddContactRequest(contactForm);//NYTT
                 return CurrentUmbracoPage();
             }
 
+            await _contactRequestService.AddContactRequest(contactForm);//NYTT
 
             /*
             using var mail = new MailService("no-reply@crito.com", "smtp.crito.com", 587, "contactform@crito.com", "P@ssw0rd2023");
