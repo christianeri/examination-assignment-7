@@ -65,8 +65,9 @@
                         <div asp-validation-summary="ModelOnly"></div>
                         
                         <input class="form-input" asp-for="@contactForm.Name" name="name" type="text" placeholder="Name*">
-                        <input class="form-input" asp-for="@contactForm.Email" name="email" type="email" placeholder="Email*">
+                        <input class="form-input" asp-for="@contactForm.Email" name="email" type="email" placeholder="Email*">                        
                         <textarea class="form-textarea" asp-for="@contactForm.Message" name="message" placeholder="Your Message*"></textarea>
+
                         
                         <button type="submit mt-2" class="btn-theme">Send Message <i class="fa-solid fa-arrow-up-right"></i></button>
                     </div>

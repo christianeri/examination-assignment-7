@@ -5,6 +5,7 @@
 
 @{
 	Layout = "LayoutWithBreadcrumb.cshtml";
+	ViewData["pageTitle"] = "News & Articles";
 	
 	var itemsPerPage = 6;
 	var pageNumber = 1;
@@ -23,39 +24,45 @@
 
 }
 
+<head>
+    <link href="~/css/articles.css" rel="stylesheet">
+</head>
+
 <section class="article-section">
-    <div class="container">
+    <div class="container border">
         <div class="browse-news">
             <h2>Our News & Articles</h2>
         </div>
         
-        @if(pagedItems != null)
-        {
-        	@foreach (var item in pagedItems!)
-        	{
-        	    var url = item.Url();
-        	    var date = item.CreateDate;
-        	    var image = item.Value<IPublishedContent>("newsImage");
-        	    var category = item.Value("articleCategory");
-        	    var title = item.Name();
-        	    var preamble = item.Value("articlePreamble");
-        	
-                <div class="articles">
-                    <a href="#" class="article">
-                        <div class="article-date">
-                            <div class="day">@date.ToString("dd")</div>
-                            <div class="month">@date.ToString("MMM")</div>
+        
+        <div class="articles">
+            @if(pagedItems != null)
+            {
+            	@foreach (var item in pagedItems!)
+            	{
+            	    var url = item.Url();
+            	    var date = item.CreateDate;
+            	    var image = item.Value<IPublishedContent>("newsImage");
+            	    var category = item.Value("articleCategory");
+            	    var title = item.Name();
+            	    var preamble = item.Value("articlePreamble");
+            	
+            	    
+                    <a href="" class="article border">
+                        <div class="article-image">
+                            <img src="@image?.Url()" alt="">
+                            <div class="article-date">
+                                <div class="day">@date.ToString("dd")</div>
+                                <div class="month">@date.ToString("MMM")</div>
+                            </div>
                         </div>
-                        <img src="@image?.Url()" alt="">
-                        <p class="category">@category</p>
+                        <p class="category pt-3">@category</p>
                         <h5>@title</h5>
                         <p>@preamble</p>
                     </a>
-                </div>
-        	
-
+            	}
         	}
-    	}
+        </div>
     	
         <nav class="item-pagination" aria-label="Page navigation">
             
