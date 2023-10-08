@@ -4,18 +4,63 @@
 
 <head>
     <link href="~/css/projects-section.css" rel="stylesheet">
+    <link href="~/css/buttons.css" rel="stylesheet">
 </head>
 
-<section class="projects-section container">
-    <div class="section-border">
-        <div class="left">
-            <h5 class="section-title">@Model.Value("servicesFeaturesSectionTag")</h5>
-            <h1 class="pb-5">@Model.Value("servicesFeaturesSectionHeading")</h1>
-            <a class="btn-theme" href="@Model.Value("servicesFeaturesSectionButtonURL")">@Model.Value("servicesFeaturesSectionButtonLabel")<i class="fa-solid fa-arrow-up-right"></i></a>
+<section class="projects-section my-5">
+    <div class="container">
+        
+        <div class="top">
+            <h5 class="section-title color-coral">Projects & Case Studies</h5>
+            <h1 class="pb-2">Let's Look at Our Global Projects</h1>
         </div>      
  
-        <div class="right feature-box">
+
+        <div class="d-none">
             @Html.GetBlockListHtml(Model.ProjectsItems)      
         </div>
+
+        <div class="bottom">
+            <div class="article-box">
+                <img class="" src="~/static/images/adeolu-eletu.jpg" alt="">
+                <h4>Grow your business</h4>
+                <hr>
+                <div class="flex-end">
+                    <a href="/projects">Read More <i class="fa-solid fa-arrow-up-right"></i></a>
+                </div>
+            </div>
+            
+            <div class="article-box">
+                <img class="" src="~/static/images/marek-levak.jpg" alt="">
+                <h4>Why your client needs a responsive website</h4>
+                <hr>
+                <div class="flex-end">
+                    <a href="/projects">Read More <i class="fa-solid fa-arrow-up-right"></i></a>
+                </div>
+            </div>
+            
+            <div class="article-box">
+                <img class="" src="~/static/images/oli-dale.jpg" alt="">
+                <h4>Educate your employees to get better results</h4>
+                <hr>
+                <div class="flex-end">
+                    <a href="/projects">Read More <i class="fa-solid fa-arrow-up-right"></i></a>
+                </div>
+            </div>
+            
+            <div class="article-box">
+                <img class="" src="~/static/images/carlos-muza.jpg" alt="">
+                <h4>Business Insights is an important piece of your business</h4>
+                <hr>
+                <div class="flex-end">
+                    <a href="/projects">Read More <i class="fa-solid fa-arrow-up-right"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="flex-center my-5">
+            <a class="btn-dark" href="/projects">All Recent Projects<i class="fa-solid fa-arrow-up-right"></i></a>
+        </div>
+        
     </div>
 </section>

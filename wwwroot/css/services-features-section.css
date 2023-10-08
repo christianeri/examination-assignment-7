@@ -15,9 +15,6 @@
     color: #F94D1C;
 }
 
-.feature-section .right {
-}
-
 .feature-box .umb-block-list {
     display: grid;
     grid-template-columns: 1fr 1fr;

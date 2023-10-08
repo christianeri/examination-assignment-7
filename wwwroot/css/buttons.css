@@ -10,6 +10,19 @@
         margin: 0px 5px;
     }
 
+.btn-dark {
+    width: fit-content;
+    height: 56px;
+    padding: 1rem 1.2rem;
+    border-radius: 40px;
+    background-color: #191919;
+    color: #FFFFFF;
+}
+
+    .btn-dark i {
+        margin: 0px 5px;
+    }
+
 .btn-circle {
     height: 3rem;
     width: 3rem;

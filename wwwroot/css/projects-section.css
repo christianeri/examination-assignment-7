@@ -1,0 +1,26 @@
+.projects-section .top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projects-section .bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    margin-top: 3rem;
+}
+
+.projects-section .bottom a {
+    color: #191919;
+}
+
+.projects-section .bottom h4 {
+    margin-top: 1rem;
+}
+
+.projects-section img {
+    width: 100%;
+    max-height: 400px;
+}
+        
