@@ -1,0 +1,17 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.HomePage>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+
+<head>
+    <link href="~/css/team-and-testimonials-section.css" rel="stylesheet">
+    <link href="~/css/buttons.css" rel="stylesheet">
+</head>
+
+<section class="team-and-testimonials">
+    
+    @await Html.PartialAsync("_MeetOurTeamSection")
+    @await Html.PartialAsync("_TestimonialsSection")
+    
+   
+    
+</section>
